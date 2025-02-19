@@ -8,24 +8,24 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Database Configuration (PostgreSQL)
-DB_HOST = "database-1.c9scia20gbq0.ap-south-1.rds.amazonaws.com"
+DB_HOST = "database-2.c9scia20gbq0.ap-south-1.rds.amazonaws.com"
 DB_NAME = "postgres"
 DB_USER = "postgres"
 DB_PASSWORD = "Allvy1234"
 
 # S3 Configuration
-S3_BUCKET = "new-one-01"
-S3_REGION = "ap-south-1"  # Change this to your AWS region
-AWS_ACCESS_KEY = "AKIASDRANKCOTO7VAKB5"
-AWS_SECRET_KEY = "FgPrAsxPsHQEqAfe30lEW2+6yUN/bsHZNs98yw+T"
+#S3_BUCKET = "new-one-01"
+#S3_REGION = "ap-south-1"  # Change this to your AWS region
+#AWS_ACCESS_KEY = "AKIASDRANKCOTO7VAKB5"
+#AWS_SECRET_KEY = "FgPrAsxPsHQEqAfe30lEW2+6yUN/bsHZNs98yw+T"
 
 # Initialize S3 client
-s3 = boto3.client(
-    "s3",
-    aws_access_key_id=AWS_ACCESS_KEY,
-    aws_secret_access_key=AWS_SECRET_KEY,
-    region_name=S3_REGION
-)
+#s3 = boto3.client(
+#   "s3",
+ #   aws_access_key_id=AWS_ACCESS_KEY,
+#    aws_secret_access_key=AWS_SECRET_KEY,
+   # region_name=S3_REGION
+#)
 
 # Connect to PostgreSQL
 def get_db_connection():
