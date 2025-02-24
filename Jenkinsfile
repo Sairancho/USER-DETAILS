@@ -3,9 +3,9 @@ pipeline {
 
     environment {
         EC2_USER = "ubuntu"                  // Change to your EC2 user (e.g., ec2-user for Amazon Linux)
-        EC2_HOST = "43.205.192.24"      // Replace with your EC2 instance IP
+        EC2_HOST = "65.0.179.195"      // Replace with your EC2 instance IP
         APP_DIR = "/home/ubuntu/USER-DETAILS/app" // Path to app directory on EC2
-        SSH_KEY = "/var/lib/jenkins/jenkkins.pem"    // Path to your EC2 private key
+        SSH_KEY = "/var/lib/jenkins/jenkins.pem"    // Path to your EC2 private key
         APP_PORT = "5000"                    // Flask application port
     }
 
