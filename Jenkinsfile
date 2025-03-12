@@ -12,10 +12,7 @@ pipeline {
             steps {
                 script {
                     echo 'Copying updated application files locally...'
-                    sh '''
-                        cp -r app/main.py app/templates /home/ubuntu/USER-DETAILS/app/
-                        chmod -R 755 /home/ubuntu/USER-DETAILS/app/
-                    '''
+                    sh 'cp -r app/main.py app/templates /home/ubuntu/USER-DETAILS/app/'
                 }
             }
         }
