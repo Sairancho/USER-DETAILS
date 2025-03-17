@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         EC2_USER = "ubuntu"                  // Change to your EC2 user (e.g., ec2-user for Amazon Linux)
-        EC2_HOST = "43.205.242.229"      // Replace with your EC2 instance IP
+        EC2_HOST = "3.108.249.250"      // Replace with your EC2 instance IP
         APP_DIR = "/home/ubuntu/USER-DETAILS/app" // Path to app directory on EC2
         SSH_KEY = "/var/lib/jenkins/jenkins.pem"    // Path to your EC2 private key
         APP_PORT = "5000"                    // Flask application port
@@ -21,9 +21,9 @@ pipeline {
         script {
             echo "Copying updated application files to EC2..."
             sh '''
-            scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/jenkins.pem -r app/main.py app/templates ubuntu@43.205.242.229:/home/ubuntu/USER-DETAILS/app/
+            scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/jenkins.pem -r app/main.py app/templates ubuntu@3.108.249.250:/home/ubuntu/USER-DETAILS/app/
             '''
-            
+            http://3.108.249.250/
             echo "Restarting application on EC2..."
             sh '''
             ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/jenkins.pem ubuntu@43.205.242.229 <<EOF
