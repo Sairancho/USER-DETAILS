@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         EC2_USER = "ubuntu"  // Change for Amazon Linux if needed
-        EC2_HOST = "13.127.234.32"  // Your EC2 instance IP
+        EC2_HOST = "65.0.109.137"  // Your EC2 instance IP
         APP_DIR = "/home/ubuntu/USER-DETAILS/app"
         SSH_KEY = "/var/lib/jenkins/jenkins.pem"
         APP_PORT = "5000"
